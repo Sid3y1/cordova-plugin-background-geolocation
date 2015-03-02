@@ -185,7 +185,7 @@ public class LocationUpdateService extends Service implements LocationListener {
             Intent main = new Intent(this, BackgroundGpsPlugin.class);
             main.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, main,  PendingIntent.FLAG_UPDATE_CURRENT);
-
+/*
             Notification.Builder builder = new Notification.Builder(this);
             builder.setContentTitle(notificationTitle);
             builder.setContentText(notificationText);
@@ -199,6 +199,7 @@ public class LocationUpdateService extends Service implements LocationListener {
             }
             notification.flags |= Notification.FLAG_ONGOING_EVENT | Notification.FLAG_FOREGROUND_SERVICE | Notification.FLAG_NO_CLEAR;
             startForeground(startId, notification);
+            */
         }
         Log.i(TAG, "- url: " + url);
         Log.i(TAG, "- params: " + params.toString());
